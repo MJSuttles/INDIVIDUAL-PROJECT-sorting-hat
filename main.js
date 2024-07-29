@@ -75,15 +75,12 @@ const form = document.querySelector("form");  // Targeting form element in HTML 
 const createStudent = (e) => {
   e.preventDefault(); // Prevents page from reloading prior to changes being made
   const selectedRadioButton = document.querySelector('input[name="flexRadioDefault"]:checked');
-  console.log(selectedRadioButton);
-  const preferToGo = document.querySelector(`label[for="${selectedRadioButton.id}"]`).innerText;
-  console.log(preferToGo);
+  const newPreferToDo = document.querySelector(`label[for="${selectedRadioButton.id}"]`).innerText;
   const newStudentObj = {  // Creating variable to use to create new pet card object
     id: students.length +1,
     firstName: document.querySelector("#exampleFirstName").value,
     lastName: document.querySelector("#exampleLastName").value,
-    // preferToDo: document.querySelector('input[name="flexRadioDefault"]:checked').value
-    preferToDo: preferToGo
+    preferToDo: newPreferToDo
   
   };
   console.log(newStudentObj);
