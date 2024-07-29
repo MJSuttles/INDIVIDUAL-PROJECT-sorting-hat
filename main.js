@@ -78,7 +78,7 @@ const createStudent = (e) => {
     id: students.length +1,
     firstName: document.querySelector("#exampleFirstName").value,
     lastName: document.querySelector("#exampleLastName").value,
-    preferToDo: document.querySelector("#prefer").value
+    preferToDo: document.querySelector("#preferenceRB").value
   };
   students.push(newStudentObj);  // Pushes new student card object to end of existing petCards array
   cardsOnDom(students);  // Repaints DOM with new array
