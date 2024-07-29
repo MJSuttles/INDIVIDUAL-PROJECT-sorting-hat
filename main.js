@@ -74,11 +74,13 @@ const form = document.querySelector("form");  // Targeting form element in HTML 
   
 const createStudent = (e) => {
   e.preventDefault(); // Prevents page from reloading prior to changes being made
+  const selectedRadioButton = document.querySelector('input[name="flexRadioDefault"]:checked');
+  const newPreferToDo = document.querySelector(`label[for="${selectedRadioButton.id}"]`).innerText;
   const newStudentObj = {  // Creating variable to use to create new pet card object
     id: students.length +1,
     firstName: document.querySelector("#exampleFirstName").value,
     lastName: document.querySelector("#exampleLastName").value,
-    preferToDo: document.querySelector("#preferenceRB").value
+    preferToDo: newPreferToDo
   };
   students.push(newStudentObj);  // Pushes new student card object to end of existing petCards array
   cardsOnDom(students);  // Repaints DOM with new array
@@ -94,7 +96,7 @@ houseCards.addEventListener("click", (e) => {  // adds Event Listener to listen 
     const [, id] = e.target.id.split("--");  // Destructures to split "ID" and card position, remove wording, and keep position number only
     const index = students.findIndex((e) => e.id === Number(id));  // Adds logic to remove from array via findIndex method - also makes sure that card being deleted matches the card's ID number
     students.splice(index, 1);  // modifies original array by removing index (the one deleted card) only
-
+    cardsOnDom(students);
   }
 });
 
@@ -128,14 +130,14 @@ showHufflepuffButton.addEventListener("click", () => {
 
 // Creating Listener Event to listen for when "Ravenclaw" button is clicked to show Ravenclaw students only
 
-showGryffindorButton.addEventListener("click", () => {
+showRavenclawButton.addEventListener("click", () => {
   const raven = filter(students, "What is wise");
   cardsOnDom(raven);
 });
 
 // Creating Listener Event to listen for when "Slytherin" button is clicked to show Slytherin students only
 
-showGryffindorButton.addEventListener("click", () => {
+showSlytherinButton.addEventListener("click", () => {
   const slyth = filter(students, "What is necessary");
   cardsOnDom(slyth);
 });
