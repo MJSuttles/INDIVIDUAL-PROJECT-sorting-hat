@@ -80,13 +80,13 @@ const form = document.querySelector("form");  // Targeting form element in HTML 
   
 const createStudent = (e) => {
   e.preventDefault(); // Prevents page from reloading prior to changes being made
-  const selectedRadioButton = document.querySelector('input[name="flexRadioDefault"]:checked');
-  const newPreferToDo = document.querySelector(`label[for="${selectedRadioButton.id}"]`).innerText;
+  const selectedRadioButton = document.querySelector('input[name="flexRadioDefault"]:checked');  // Checking for selected radio button choice
+  const newPreferToDo = document.querySelector(`label[for="${selectedRadioButton.id}"]`).innerText;  // Grabbing the text from the radio button to display on card
   const newStudentObj = {  // Creating variable to use to create new pet card object
     id: students.length +1,
     firstName: document.querySelector("#exampleFirstName").value,
     lastName: document.querySelector("#exampleLastName").value,
-    preferToDo: newPreferToDo
+    preferToDo: newPreferToDo  // Reassigns preferToDo function to new card result based on answer to radio button question
   };
   students.push(newStudentObj);  // Pushes new student card object to end of existing petCards array
   cardsOnDom(students);  // Repaints DOM with new array
@@ -96,12 +96,12 @@ form.addEventListener("submit", createStudent);  // Creates listener event to ap
 
 // Creating function to delete House card
 
-const houseCards = document.querySelector("#houseCards");  // Targets houseCards ID in HTML to use find and delete House card entry
+const houseCards = document.querySelector("#houseCards");  // Targets houseCards ID in HTML to use to find and delete House card entry
 houseCards.addEventListener("click", (e) => {  // adds Event Listener to listen for click
   if (e.target.id.includes("delete")) {  // Checks that e.target.id includes "delete"
     const [, id] = e.target.id.split("--");  // Destructures to split "ID" and card position, remove wording, and keep position number only
     const index = students.findIndex((e) => e.id === Number(id));  // Adds logic to remove from array via findIndex method - also makes sure that card being deleted matches the card's ID number
-    students.splice(index, 1);  // modifies original array by removing index (the one deleted card) only
+    students.splice(index, 1);  // Modifies original array by removing index (the one deleted card) only
     cardsOnDom(students);
   }
 });

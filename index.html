@@ -9,8 +9,10 @@
 </head>
 <body>
   <div id="header">
-    <h1>Welcome to the Sorting Hat!</h1>
-    <p>Have you ever been curious about what Harry Potter House you belong to?  It's easy to find-out!  Just fill-out the two questions below and then hit "Submit"!  You may be surprised at the results!</p>
+    <div id="welcome">
+      <h1>Welcome to the Sorting Hat!</h1>
+      <p>Have you ever been curious about what Harry Potter House you belong to?  It's easy to find-out!  Just fill-out the two questions below and then hit "Submit"!  You may be surprised at the results!</p>
+    </div>
   </div>
   
   <div class="btn-prefer">
@@ -28,17 +30,17 @@
       <label for="exampleImage" class="form-label">Image</label>
       <input type="input" class="form-control" id="exampleImage">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 form-check">
       <label for="exampleFirstName" class="form-label">First Name</label>
-      <input type="text" class="form-control" id="exampleFirstName" required>
+      <input type="input" class="form-control" id="exampleFirstName" required>
     </div>
-    <div class="mb-3">
+    <div class="mb-3 form-check">
       <label for="exampleLastName" class="form-label">Last Name</label>
-      <input type="text" class="form-control" id="exampleLastName" required>
+      <input type="input" class="form-control" id="exampleLastName" required>
     </div>
     <div id="preferenceRB">
       <div class="form-check">
-        <h6>Do you prefer to Do?</h6>
+        <h3>Do you prefer to Do?</h3>
         <input class="form-check-input" type="radio" name="flexRadioDefault" id="whatIsRight">
         <label class="form-check-label" for="whatIsRight">
           What is right
