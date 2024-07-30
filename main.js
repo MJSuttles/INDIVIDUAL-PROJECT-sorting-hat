@@ -1,30 +1,35 @@
 const students = [
   {
     id: 1,
+    image: "https://i.natgeofe.com/k/015ed957-e87b-403b-92a5-75372e8a28c3/a-8-harry-potter-harry_3x4.jpg",
     firstName: "Harry",
     lastName: "Potter",
     preferToDo: "What is right"
   },
   {
     id: 2,
+    image: "https://media.harrypotterfanzone.com/hermione-granger-chamber-of-secrets-portrait-3.jpg",
     firstName: "Hermione",
     lastName: "Granger",
     preferToDo: "What is right"
   },
   {
     id: 3,
+    image: "https://images.squarespace-cdn.com/content/v1/5a5d268364b05f7a0f038afe/1532024159009-FMF41SUE0A4Q8BEOU021/Voldemort.jpg",
     firstName: "Lord",
     lastName: "Voldemort",
     preferToDo: "What is necessary"
   },
   {
     id: 4,
+    image: "https://media.harrypotterfanzone.com/cedric-diggory-goblet-of-fire-portrait.jpg",
     firstName: "Cedric",
     lastName: "Diggory",
     preferToDo: "What is kind"
   },
   {
     id: 5,
+    image: "https://images.ctfassets.net/usf1vwtuqyxm/t6GVMDanqSKGOKaCWi8oi/74b6816d9f913623419b98048ec87d25/LunaLovegood_WB_F5_LunaLovegoodPromoCloseUp_Promo_080615_Port.jpg",
     firstName: "Luna",
     lastName: "Lovegood",
     preferToDo: "What is wise"
@@ -44,9 +49,10 @@ const cardsOnDom = (array) => {
   let domString = "";
   for (const student of array) {
     domString += `<div class="card" style="width: 18rem;">
+    <h2 class="first-name">${student.firstName}</h2>
+    <h2 class="last-name">${student.lastName}</h2>
     <div class="card-body">
-      <h2 class="first-name">${student.firstName}</h2>
-      <h2 class="last-name">${student.lastName}</h2>
+      <image src=${student.image} class="card-img-top" alt=${student.name}></image>
     </div>
     <h2 class="house-student house-student-footer--${student.preferToDo}">${student.preferToDo}</h2>
     <button class="btn btn-danger" id="delete--${student.id}">Delete</button>
