@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "HARRYP";
+  src: url("./fonts/MyCustomFont.ttf");
+}
+
+body {
+  font-family: "HARRYP", sans-serif;
+  font-size: 2.0em;
+}
+
+#header {
+
+  background-color: cyan;
+  height: 200px;
+  text-align: center;
+  vertical-align: middle;
+  /* align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center; */
+}
+
+#welcome {
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 20px;
+}
+
+#houseCards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  margin: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  justify-content: space-evenly;
+  gap: 40 px;
+}
+
+.btn-prefer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  gap: 60px;
+}
+
+.mb-3 form-check {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  width: 50%;
+  height: 40px;
+}
+
+#showAll,
+#showGryffindor,
+#showHufflepuff,
+#showRavenclaw,
+#showSlytherin {
+  height: 40px;
+  width: 20%;
+}
