@@ -33,6 +33,27 @@ const students = [
     firstName: "Luna",
     lastName: "Lovegood",
     preferToDo: "What is wise"
+  },
+  {
+    id: 6,
+    image: "https://images.ctfassets.net/usf1vwtuqyxm/6o3lBfUzFoke5XPwn4vtdA/b3c3cbd509cb485515f616be8025d23f/FOUNDATIONAL-DISCOVER-FEATURE-newt-scamander-different-kind-of-hero-004PHOTOBU18181_PHUP_FB2.jpg",
+    firstName: "Newt",
+    lastName: "Scammander",
+    preferToDo: "What is kind"
+  },
+  {
+    id: 7,
+    image: "https://i.pinimg.com/474x/22/06/b9/2206b98fdd008df7f0b669cbb7711e0d.jpg",
+    firstName: "Myrtle",
+    lastName: "Warren",
+    preferToDo: "What is wise"
+  },
+  {
+    id: 8,
+    image: "https://upload.wikimedia.org/wikipedia/en/1/16/Draco_Mal.JPG",
+    firstName: "Draco",
+    lastName: "Malfoy",
+    preferToDo: "What is necessary"
   }
 ]
 
