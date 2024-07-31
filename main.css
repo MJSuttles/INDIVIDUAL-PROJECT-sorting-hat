@@ -5,7 +5,7 @@
 
 body {
   font-family: "HARRYP", sans-serif;
-  font-size: 2.0em;
+  font-size: 1.75em;
 }
 
 #header {
@@ -26,16 +26,46 @@ body {
   padding-top: 20px;
 }
 
+#formContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 40px 10px;
+}
+
+#nameContainer {
+  width: 50%;
+  align-items: flex-start;
+}
+
+.form-group {
+  margin-left: 40px;
+}
+
+#preferContainer {
+  width: 50%;
+  align-items: flex-end;
+}
+
+#preferenceRB {
+  margin-left: 40px;
+}
+
+.btn btn-primary {
+  margin-left: 40px;
+  padding-left: 40px;
+  height: 40px;
+  width: 100%;
+}
+
 #houseCards {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
   margin: 20px;
-  padding-bottom: 20px;
   text-align: center;
   justify-content: space-evenly;
-  gap: 40 px;
+  gap: 40px;
 }
 
 .btn-prefer {
@@ -45,7 +75,9 @@ body {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  margin-top:  60px;
+  margin-bottom: 60px;
+  padding: 20x;
   gap: 60px;
 }
 
