@@ -77,6 +77,7 @@ const cardsOnDom = (array) => {
     </div>
     <h2 class="house-student house-student-footer--${student.preferToDo}">${student.preferToDo}</h2>
     <button class="btn btn-danger" id="delete--${student.id}">Delete</button>
+    <button type="button" class="btn btn-dark">Expel!!</button>
   </div>`;
   }
   
