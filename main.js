@@ -93,6 +93,7 @@ const expelledStudentsOnDom = (array) => {
   let domString = "";
   for (const student of array) {
     domString += `<div class="card" style="width: 18rem;">
+    <h2>Those who shall not be named!</h2>
     <h2 class="first-name">${student.firstName}</h2>
     <h2 class="last-name">${student.lastName}</h2>
     <button class="btn btn-danger" id="delete--${student.id}">Delete</button>
