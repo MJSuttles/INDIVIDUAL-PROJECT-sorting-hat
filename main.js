@@ -104,8 +104,6 @@ const expelledStudentsOnDom = (array) => {
     <h2 class="first-name">${student.firstName}</h2>
     <h2 class="last-name">${student.lastName}</h2>
     <h2 class="house-assignment" id="assignment--${student.house}">${student.house}</h2>
-    <button class="btn btn-danger" id="delete--${student.id}">Delete</button>
-    <button type="button" class="btn btn-dark" id="expel--${student.id}">Expel!!</button>
   </div>`;
   }
   
@@ -152,7 +150,6 @@ houseCards.addEventListener("click", (e) => {  // adds Event Listener to listen 
     const index = students.findIndex((e) => e.id === Number(id));  // Adds logic to remove from array via findIndex method - also makes sure that card being deleted matches the card's ID number
     students.splice(index, 1);  // Modifies original array by removing index (the one deleted card) only
     studentsOnDom(students);
-    expelledStudentsOnDom(expelledStudents);
   }
 });
 
