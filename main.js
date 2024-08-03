@@ -79,7 +79,7 @@ const renderToDom = (divId, htmlToRender) => {
   selectedDiv.innerHTML = htmlToRender;
 };
 
-// Creating array to render House cards on DOM via domString variable and then calling on utility function above to apply pet cards to the DOM via .innerHTML
+// Creating array to render House cards on DOM via domString variable and then calling on utility function above to apply house cards to the DOM via .innerHTML
 
 const studentsOnDom = (array) => {
   let domString = "";
@@ -96,11 +96,14 @@ const studentsOnDom = (array) => {
   renderToDom("#houseCards", domString);
 };
 
+// Creating array to render expelled students on DOM via expelledStudentsOnDom function and then calling on utility function above to apply expelled students cards to the DOM via .innerhtml
+
 const expelledStudentsOnDom = (array) => {
   let domString = "";
   for (const student of array) {
     domString += `<div class="card" style="width: 18rem;">
-    <h2>Those who shall not be named!</h2>
+    <h2>Those Who Shall Not Be Named!</h2>
+    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/7/7d/DeathEaters.jpg" alt="Card image cap">
     <h2 class="first-name">${student.firstName}</h2>
     <h2 class="last-name">${student.lastName}</h2>
     <h2 class="house-assignment" id="assignment--${student.house}">${student.house}</h2>
@@ -152,6 +155,8 @@ houseCards.addEventListener("click", (e) => {  // adds Event Listener to listen 
     studentsOnDom(students);
   }
 });
+
+// Creating function to expel students
 
 houseCards.addEventListener("click", (e) => {
   if (e.target.id.includes("expel")) {
