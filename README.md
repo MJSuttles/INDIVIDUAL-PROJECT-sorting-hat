@@ -1,6 +1,5 @@
 # Sorting Hat
 
-These are the requirements for your README on every repo you create while at NSS:
 Name of the Project: INDIVIDUAL-PROJECT-sorting-hate
 Overview of the project: This website shows a pre-existing array of the Wizarding World of Harry Potter students. The website visitor can enter his/her name and then hit submit to be randomly sorted into a Harry Potter house (Gryffindor, Hufflepuff, Ravenclaw, or Slytherin). They will then see their name on a new student card among the existing students. The user can then either delete any of the students (incluind himself/herself) or expel them into Voldemort's Army.
 Link to your wireframes/prototype: N/A
@@ -11,7 +10,9 @@ Description of the user and the problem you are solving for them: I created a we
 List of features: Array of existing students, a form for website visitorws to fill-out to place themselves in a Harry Potter House, buttons for the visitor to use to delete students or expel to Voldemort's Army.
 Screenshots of your project: ??
 List of contributors and links to their GH profiles: Myself
-Link to Loom video walkthrough of your app (no more than 1 minute long! Make it great):
+Link to Loom video walkthrough of your app (no more than 1 minute long! Make it great): https://www.loom.com/share/4165b7843f68483a9afe2def3ea1a25c
+
+---
 
 ## Goals
 
