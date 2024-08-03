@@ -57,9 +57,15 @@ const students = [
   }
 ]
 
+// Constructing expelledStudents arrray
+
 const expelledStudents = [];
 
+// Constructing houseArray into which all student cards can be sorted
+
 const houseArray = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"];
+
+// Constructing getRandomHouse function to use to randomly sort all new students created through createStudent function below
 
 const getRandomHouse = () => {
   index = Math.floor(Math.random() * 3)
@@ -81,6 +87,7 @@ const studentsOnDom = (array) => {
     domString += `<div class="card" style="width: 18rem;">
     <h2 class="first-name">${student.firstName}</h2>
     <h2 class="last-name">${student.lastName}</h2>
+    <h2 class="house-assignment" id="assignment--${student.house}">${student.house}</h2>
     <button class="btn btn-danger" id="delete--${student.id}">Delete</button>
     <button type="button" class="btn btn-dark" id="expel--${student.id}">Expel!!</button>
   </div>`;
@@ -96,6 +103,7 @@ const expelledStudentsOnDom = (array) => {
     <h2>Those who shall not be named!</h2>
     <h2 class="first-name">${student.firstName}</h2>
     <h2 class="last-name">${student.lastName}</h2>
+    <h2 class="house-assignment" id="assignment--${student.house}">${student.house}</h2>
     <button class="btn btn-danger" id="delete--${student.id}">Delete</button>
     <button type="button" class="btn btn-dark" id="expel--${student.id}">Expel!!</button>
   </div>`;
@@ -107,13 +115,13 @@ const expelledStudentsOnDom = (array) => {
 // Creating filter function to filter results of array based on "preferToD" results via preferTo variable into available houses (Gryffindor, Hufflepuff, Ravenclaw,or Slytherin) and then returning the array
 
 const filter = (array, house) => {
-  const preferArray = [];
+  const randomArray = [];
   for (member of array) {
     if (member.house === house) {
-      preferArray.push(member);
+      randomArray.push(member);
     }
   }
-  return preferArray;
+  return randomArray;
 }
 
 // Creating createStudent function to add new student cards
@@ -144,6 +152,7 @@ houseCards.addEventListener("click", (e) => {  // adds Event Listener to listen 
     const index = students.findIndex((e) => e.id === Number(id));  // Adds logic to remove from array via findIndex method - also makes sure that card being deleted matches the card's ID number
     students.splice(index, 1);  // Modifies original array by removing index (the one deleted card) only
     studentsOnDom(students);
+    expelledStudentsOnDom(expelledStudents);
   }
 });
 
